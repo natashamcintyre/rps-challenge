@@ -6,20 +6,12 @@ describe Game do
   subject { described_class.new(player) }
 
   it "knows the name of the player" do
-    expect(subject.player).to be player
+    expect(subject.player).to be_instance_of player
   end
   #
   # it "returns its instance when loaded" do
   #   expect(Game.load).to be_instance_of Game
   # end
-
-  it "knows the score for the player" do
-    expect(subject.player_score).to be 0
-  end
-
-  it "knows the score for the computer" do
-    expect(subject.computer_score).to be 0
-  end
 
   it "reads the game message" do
     expect(subject.message).to start_with "Okay"
@@ -100,6 +92,10 @@ describe Game do
     it "increase computer score if player loses" do
       expect { subject.compare("rock", "paper") }.to change { subject.computer_score }.by(1)
     end
-
   end
+
+  describe '#play' do
+    it ''
+  end
+
 end

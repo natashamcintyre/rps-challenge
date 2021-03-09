@@ -11,7 +11,7 @@ SimpleCov.start
 
 # For accurate test coverage measurements, require your code AFTER 'SimpleCov.start'
 
-require File.dirname(__FILE__) + '/../app.rb'
+require File.dirname(__FILE__) + '/../rock_paper_scissors_app.rb'
 
 Capybara.app = RockPaperScissorsApp
 
